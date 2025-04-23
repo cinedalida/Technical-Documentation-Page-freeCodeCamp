@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>C# Tutorial</header>
+      <a class="nav-link" href="#Section_One">Introduction</a>
+      <a class="nav-link" href="#Section_Two">Get Started</a>
+      <a class="nav-link" href="#Section_Three">Syntax</a>
+      <a class="nav-link" href="#Section_Four">Output</a>
+      <a class="nav-link" href="#Section_Five">Comments</a>
+      <a class="nav-link" href="#Section_Six">Variables</a>
+      <a class="nav-link" href="#Section_Seven">Data Types</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Section_One">
+        <header>Introduction</header>
+        <p>
+          C# (C-Sharp) is a modern, object-oriented programming language
+          developed by Microsoft as part of the .NET platform. </br> It is commonly
+          used for:
+        </p>
+        <ul>
+          <li>Web development (e.g., ASP.NET)</li>
+          <li>Game development (e.g., Unity)</li>
+          <li>Desktop applications (e.g., Windows Forms, WPF)</li>
+          <li>Mobile applications (e.g., Xamarin)</li>
+        </ul>
+        <h3>Useful Links:</h3>
+        <ul>
+          <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C# Documentation</a></li>
+          <li><a href="https://www.learn-c.org/">Learn C#</a></li>
+          <li><a href="https://www.codecademy.com/learn/learn-c-sharp">Codecademy C# Course</a></li>
+          <li><a href="https://www.udemy.com/course/csharp-tutorial-for-beginners/">Udemy C# Course</a></li>
+      </section>
+
+      <section class="main-section" id="Section_Two">
+        <header>Get Started</header>
+        <h3>Installation</h3>
+        <ol>
+          <li>Install .NET SDK:</li>
+            <ul>
+              <li><a href="https://dotnet.microsoft.com/download">Download .NET SDK</a></li>
+            </ul>
+          <li>Install Visual Studio (Recommended):</li>
+            <ul>
+              <li><a href="https://visualstudio.microsoft.com/">Visual Studio Community Edition</a></li>
+            </ul>
+            <ul>
+              <li>Download Visual Studio</a></li>
+            </ul>
+          <li>Or use Visual Studio Code:</li>
+            <ul>
+              <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+            </ul>
+            <ul>
+              <li>Install the C# extension by Microsoft.</a></li>
+            </ul>
+        </ol>
+        <p>Setup a Project (Terminal)</p>
+        <pre><code class="language-bash">
+          dotnet new console -n HelloWorldApp
+          cd HelloWorldApp
+          dotnet run
+          </code></pre>
+      </section>
+
+      <section class="main-section" id="Section_Three">
+        <header>Syntax</header>
+        <p>Basic structure of a C# program:</p>
+        <pre><code class="language-csharp">
+          using System;
+          
+          class Program
+          {
+              static void Main(string[] args)
+              {
+                  Console.WriteLine("Hello, World!");
+              }
+          }
+          </code></pre>
+          <p>Breakdown:</p>
+          <ul>
+            <li>using System; — includes the System namespace.</li>
+            <li>class Program — defines a class.</li>
+            <li>static void Main(string[] args) — entry point of the program.</li>
+            <li>Console.WriteLine() — prints text to the console.</li>
+          </ul>
+      </section>
+
+      <section class="main-section" id="Section_Four">
+        <header>Output</header>
+        <p>Example</p>
+        <pre><code class="language-csharp">
+          Console.WriteLine("This is a line.");
+          Console.Write("This is ");
+          Console.Write("on the same line.");
+          </code></pre>
+        
+        <p>Output</p>
+          <pre><code>
+            This is a line.
+            This is on the same line.
+          </code></pre>
+      </section>
+
+      <section class="main-section" id="Section_Five">
+        <header>Comments</header>
+        <p>Single-Line Comment</p>
+        <pre><code class="language-csharp">
+          // This is a single-line comment
+          </code></pre>
+        <p> Multi-line Comment</p>
+        <pre><code class="language-csharp">
+          /*
+          This is a multi-line comment
+          spanning more than one line
+          */
+          </code></pre>
+      </section>
+
+      <section class="main-section" id="Section_Six">
+        <header>Variables</header>
+        <p>Variables store data values.</p>
+        <pre><code class="language-csharp">
+          int age = 21;
+          string name = "Alice";
+          double pi = 3.14;
+          bool isStudent = true;
+
+          Console.WriteLine("Name: " + name + ", Age: " + age);
+          </code></pre>
+      </section>
+
+      <section class="main-section" id="Section_Seven">
+        <header>Data Types</header>
+        <p>Common Data Types in C#:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Example</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>int</code></td>
+              <td><code>int x = 5;</code></td>
+              <td>Whole numbers</td>
+            </tr>
+            <tr>
+              <td><code>double</code></td>
+              <td><code>double pi = 3.14;</code></td>
+              <td>Floating-point numbers</td>
+            </tr>
+            <tr>
+              <td><code>char</code></td>
+              <td><code>char c = 'A';</code></td>
+              <td>Single character</td>
+            </tr>
+            <tr>
+              <td><code>string</code></td>
+              <td><code>string s = "Hello";</code></td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td><code>bool</code></td>
+              <td><code>bool isTrue = false;</code></td>
+              <td>Boolean true/false</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
