@@ -1,32 +1,66 @@
 /* GOOGLE FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --bg-dark: #1d1e22;
+  --bg-darker: #131417;
+  --bg-darkest: #000000;
+  --text-light: #f1f1f1;
+  --text-muted: #c5c5c5;
+  --accent: #04aa6d;
+  --code-bg: #2d2d2d;
+  --code-border: #3e3e3e;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
   margin: 0;
-  font-family: poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+a {
+  color: var(--accent);
 }
 
 #navbar {
+  margin-left: 240px;
   min-width: 200px;
-  background-color: #f4f4f4;
+  background-color: var(--bg-darker);
   padding: 1rem;
   position: fixed;
   height: 100%;
   overflow-y: auto;
+  border-right: 1px solid #333;
 }
 
 #navbar header {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: var(--accent);
 }
 
 .nav-link {
   display: block;
   margin: 0.5rem 0;
-  color: #333;
+  color: var(--text-muted);
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 #main-doc {
@@ -36,14 +70,54 @@ body {
 }
 
 .main-section {
-  margin-bottom: 3rem;
+  align-items: center; /* Only works if it's a flex item or flex container */
+  width: 1000px;
+  margin: 0 auto 3rem;
 }
 
-code {
-  background-color: #eee;
+code,
+pre code {
+  background-color: var(--code-bg);
+  color: #eee;
   padding: 0.2rem 0.4rem;
+  border-radius: 5px;
   display: inline-block;
   margin: 0.5rem 0;
+  font-family: monospace;
+}
+
+pre {
+  background-color: var(--code-bg);
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 4px solid var(--accent);
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: var(--bg-darker);
+}
+
+th,
+td {
+  border: 1px solid #444;
+  padding: 0.75rem;
+  text-align: left;
+  color: var(--text-light);
+}
+
+th {
+  background-color: #2a2b2e;
+  color: var(--accent);
+}
+
+header {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -55,6 +129,8 @@ code {
     position: static;
     width: 100%;
     height: auto;
+    border-right: none;
+    border-bottom: 1px solid #333;
   }
 
   #main-doc {
